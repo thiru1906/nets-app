@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <welcome-file-list>
+    <welcome-file>html/welcome.html</welcome-file>
+  </welcome-file-list>
+  
+  <listener>
+    <listener-class>com.dev.news.listener.RestAPILoader</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.dev.news.listener.DBListener</listener-class>
+  </listener>
+  
+  
+  
+   <filter>
+    <filter-name>Filter</filter-name>
+    <filter-class>com.dev.news.filter.EntryFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+    <filter-name>Filter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+   <servlet>
+    <servlet-name>APIServlet</servlet-name>
+    <servlet-class>com.dev.news.servlet.APIServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>APIServlet</servlet-name>
+    <url-pattern>/api/*</url-pattern>
+  </servlet-mapping>
+</web-app>

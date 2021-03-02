@@ -1,0 +1,26 @@
+{
+	"name" : "topic",
+	"api_path" : "/topics",
+	"table_name" : "topic",
+	"handler" : "TopicHandler",
+	"attributes" : [
+		{
+			"name" : "id",
+			"display_name" : "topic_id",
+			"column_name" : "topic.id",
+			"type" : "long",
+			"ref_display" : true,
+			"identifier" : true
+		},
+		{
+			"name" : "name",
+			"column_name" : "topic.name",
+			"display_name" : "name",
+			"type" : "string",
+			"ref_display" : true
+		}
+	],
+	"supported_operations" : [
+		"get","add"
+	]
+}

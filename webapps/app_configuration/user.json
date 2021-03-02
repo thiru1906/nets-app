@@ -1,0 +1,45 @@
+{
+	"name" : "user",
+	"api_path" : "/users",
+	"table_name" : "User",
+	"handler" : "SimpleUnitHandler",
+	"attributes" : [
+		{
+			"name" : "id",
+			"display_name" : "user_id",
+			"column_name" : "\"User\".id",
+			"type" : "long",
+			"ref_display" : true,
+			"identifier" : true
+		},
+		{
+			"name" : "name",
+			"column_name" : "\"User\".name",
+			"display_name" : "name",
+			"type" : "string",
+			"ref_display" : true
+		},
+		{
+			"name" : "email_id",
+			"column_name" : "\"User\".email_id",
+			"display_name" : "email_id",
+			"type" : "string"
+		},
+		{
+			"name" : "number",
+			"column_name" : "\"User\".number",
+			"display_name" : "contact_number",
+			"type" : "string"
+		},
+		{
+			"name" : "token",
+			"display_name" : "token_id",
+			"type" : "string",
+			"column_name" : "\"User\".token_id"
+		}
+	
+	],
+	"supported_operations" : [
+		"add", "edit", "delete", "get"
+	]
+}

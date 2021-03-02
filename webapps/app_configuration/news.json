@@ -1,0 +1,92 @@
+{
+	"name" : "news",
+	"api_path" : "/news",
+	"table_name" : "news",
+	"handler" : "NewsHandler",
+	"attributes" : [
+		{
+			"name" : "id",
+			"display_name" : "news_id",
+			"column_name" : "news.id",
+			"type" : "long",
+			"ref_display" : true,
+			"identifier" : true
+		},
+		{
+			"name" : "title",
+			"column_name" : "news.TITLE",
+			"display_name" : "title",
+			"type" : "string",
+			"ref_display" : true
+		},
+		{
+			"name" : "content",
+			"column_name" : "news.CONTENT",
+			"type" : "string",
+			"display_name" : "description"
+		},
+		{
+			"name" : "author",
+			"column_name" : "news.PUBLISHER_ID",
+			"display_name" : "publisher",
+			"type" : "unit",
+			"ref_display" : true,
+			"unit" : "publisher"
+		},
+		{
+			"name" : "city",
+			"column_name" : "news.CITY",
+			"display_name" : "city",
+			"ref_display" : true,
+			"type" : "string"			
+		},
+		{
+			"name" : "state",
+			"column_name" : "news.STATE",
+			"display_name" : "state",
+			"ref_display" : true,
+			"type" : "string"
+		},
+		{
+			"name" : "country",
+			"column_name" : "news.COUNTRY",
+			"display_name" : "country",
+			"ref_display" : true,
+			"type" : "string"
+		},
+		{
+			"name" : "address",
+			"column_name" : "news.FULL_ADDRESS",
+			"display_name" : "full_address",
+			"ref_display" : true,
+			"type" : "string"
+		},
+		{
+			"name" : "image",
+			"display_name" : "image_url",
+			"type" : "string",
+			"ref_display" : true,
+			"column_name" : "news.IMAGE_URL"
+		},
+		{
+			"name" : "created_time",
+			"display_name" : "created_time",
+			"type" : "long",
+			"column_name" : "news.CREATED_TIME",
+			"ref_display" : true,
+			"is_system" : true		
+		},
+		{
+			"name" : "topic",
+			"column_name" : "news.TOPIC_ID",
+			"display_name" : "topic",
+			"type" :"unit",
+			"ref_display" : true,
+			"unit" : "topic"
+		}
+	
+	],
+	"supported_operations" : [
+		"add", "edit", "delete", "get"
+	]
+}
