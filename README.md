@@ -1,1 +1,1 @@
-# nets-app
+# news-app
